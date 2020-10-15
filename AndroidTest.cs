@@ -34,6 +34,7 @@ namespace VillageAppiumAutomation
         {
 
             driver.PressKeyCode(AndroidKeyCode.Home);
+            driver.PressKeyCode(AndroidKeyCode.Home);
 
             driver.Quit();
         }
