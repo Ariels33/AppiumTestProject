@@ -17,15 +17,16 @@ namespace VillageAppiumAutomation
 
             AppiumOptions capabilities = new AppiumOptions();
             capabilities.AddAdditionalCapability(MobileCapabilityType.PlatformName, "iOS");
+            capabilities.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "14.0");
             capabilities.AddAdditionalCapability(MobileCapabilityType.AutomationName, "XCUITest");
             capabilities.AddAdditionalCapability(MobileCapabilityType.DeviceName, "iPhone 11");
 
-            AppiumServiceBuilder builder = new AppiumServiceBuilder();
-            AppiumLocalService service = builder.Build();
-            service.Start();
+            //AppiumServiceBuilder builder = new AppiumServiceBuilder();
+            //AppiumLocalService service = builder.Build();
+            //service.Start();
 
-            driver = new IOSDriver<IOSElement>(service, capabilities);
-            // driver = new IOSDriver<IOSElement>(new Uri("http://localhost:4723/wd/hub"), capabilities);
+            // driver = new IOSDriver<IOSElement>(service, capabilities);
+            driver = new IOSDriver<IOSElement>(new Uri("http://localhost:4723/wd/hub"), capabilities);
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
 
