@@ -3,7 +3,6 @@ using OpenQA.Selenium.Appium.Enums;
 using System;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.iOS;
-using OpenQA.Selenium.Appium.MultiTouch;
 using OpenQA.Selenium.Appium.Service;
 
 namespace VillageAppiumAutomation
@@ -33,12 +32,12 @@ namespace VillageAppiumAutomation
         }
 
         [Test]
-        public void LoginTest()
+        public void ConnectionTest()
         {
 
             driver.FindElementByAccessibilityId("Photos").Click();
 
-            TouchAction action = new TouchAction(driver);
+            //TouchAction action = new TouchAction(driver);
             //action.Tap(140, 457);
             //action.Perform();
 
